@@ -4,7 +4,7 @@ description: Edit, review, audit, or draft standalone prose while preserving the
 license: MIT
 metadata:
   author: huntsyea
-  version: "1.0.0"
+  version: "1.0.1"
 ---
 
 # Human writing
@@ -29,7 +29,7 @@ Use when the user asks for new prose. Follow the supplied brief, audience, forma
 
 ### Technical documentation
 
-Apply these rules when writing, editing, or reviewing eve's documentation:
+Apply these rules on top of the edit, detect, or draft mode when the prose is instructional documentation: a README, guide, reference page, runbook, or agent instruction file such as `AGENTS.md`, `CLAUDE.md`, or `SKILL.md`.
 
 - Identify the audience, goal, and content type before writing. Keep each page focused on one job and read nearby docs for established terminology and structure.
 - Verify behavior against the code or an authoritative source. Never invent examples, measurements, implementation details, or citations to make prose more specific.
@@ -37,7 +37,7 @@ Apply these rules when writing, editing, or reviewing eve's documentation:
 - Prefer active voice, present tense, concrete verbs, and consistent terms. Do not describe a reader's task as `easy`, `simple`, or `quick`.
 - Open with a short summary of what the page helps the reader do. Use sentence case and descriptive headings, focused paragraphs, and lists when they improve scanning.
 - Define unfamiliar terms and spell out acronyms on first use. Use inline code for paths and identifiers, and reserve bold for user interface elements or critical facts.
-- Prefer TypeScript examples unless the subject is language-agnostic. Add a language tag, explain each example, and keep it minimal, runnable, and consistent with the current API.
+- Write code examples in the project's primary language unless the subject is language-agnostic. Add a language tag, explain each example, and keep it minimal, runnable, and consistent with the current API.
 - Use descriptive link text and placeholders such as `your_access_token_here`. Avoid bare URLs, `here`, `<TOKEN>`, and unexplained values.
 - For review-only requests, group concise findings by file and include a clickable `file:line` location. If a file passes, report `✓ pass`.
 
@@ -103,7 +103,7 @@ Follow repository conventions when they conflict with these rules.
 
 ## Workflow
 
-1. Determine whether the request is edit, detect, or draft.
+1. Determine whether the request is edit, detect, or draft, and whether the technical documentation rules also apply.
 2. Read the full source before changing or judging it.
 3. Identify the core point and the writer's voice signals. Keep this note internal.
 4. Make only changes supported by the source and the requested mode.
